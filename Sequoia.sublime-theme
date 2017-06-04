@@ -11,6 +11,15 @@
     { "class": "sidebar_label",          "font.face": "Helvetica Neue", "settings": [ "!el_capitan_font_default" ] },
 
 //
+// TITLE BAR
+//
+    {
+        "class": "title_bar",
+        "fg": [255, 255, 255, 255],
+        "bg": [40, 40, 40, 255],
+    },
+
+//
 // TABS (REGULAR)
 //
 
@@ -457,13 +466,33 @@
         "class": "status_bar",
         "layer0.texture": "Theme - Sequoia/Sequoia/status-bar-background.png",
         "layer0.opacity": 1.0,
-        "layer0.inner_margin": [2, 2],
-        "content_margin": [8, 4, 8, 4]
+        "layer0.inner_margin": [0, 1],
+        "content_margin": [6, 2, 6, 1]
     },
     // Status bar button
     {
         "class": "status_button",
         "min_size": [100, 0]
+    },
+    {
+        "class": "panel_button_control",
+        "layer0.texture": "Theme - Sequoia/Sequoia/panels-btn.png",
+        "layer0.opacity": { "target": 0.4, "speed": 4.0, "interpolation": "smoothstep" },
+        "content_margin": [12, 11]
+    },
+    {
+        "class": "panel_button_control",
+        "attributes": ["hover"],
+        "layer0.opacity": { "target": 0.6, "speed": 4.0, "interpolation": "smoothstep" },
+    },
+    {
+        "class": "status_container",
+        "content_margin": [6, 0, 0, 0]
+    },
+    {
+        "class": "status_button",
+        "content_margin": [10, 0, 10, 0],
+        "min_size": [80, 0]
     },
     // Status bar label
     {
@@ -766,7 +795,6 @@
     // Quick panel background
     {
         "class": "overlay_control",
-        "settings": ["!sequoia_retina_fix"],
         "layer0.texture": "Theme - Sequoia/Sequoia/quick-panel-background.png",
         "layer0.inner_margin": [25, 4, 25, 25],
         "layer0.opacity": 1.0,
@@ -776,10 +804,9 @@
     // Quick panel background (Retina fix)
     {
         "class": "overlay_control",
-        "settings": ["sequoia_retina_fix"],
-        "layer0.tint": [67, 67, 67],
+        "layer0.tint": [255, 255, 255],
         "layer0.opacity": 1.0,
-        "content_margin": [6, 8, 6, 6]
+        "content_margin": [18, 6, 18, 24]
     },
 
 //
